@@ -2,14 +2,11 @@ require("dotenv").config({ path: './.env' });
 const express = require("express");
 const bodyParser = require("body-parser");
 
-// Mysql connection
-const dbConn = require('./config/db.config');
-
 // create express app
 const app = express();
 
 // Setup server port
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,8 +19,13 @@ app.get('/', (req, res) => {
     res.sendStatus(200);
 });
 
+// Require employee routes
+const employeeRoutes = require('./src/routes/employee.routes');
+
+// using a middleware
+app.use('/api/v1/employees', employeeRoutes);
+
 // listen for requests
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
-    dbConn.connectToServer();
 });

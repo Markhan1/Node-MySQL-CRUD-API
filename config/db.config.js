@@ -11,17 +11,10 @@ const dbConn = mysql.createConnection({
   database: 'node_mysql_crud_db'
 });
 
-var _db;
+dbConn.connect((err) => {
+  if (err) throw err;
+  console.log("Connected to MySQL Server");
+});
 
-module.exports = {
-  connectToServer: function() {
-    dbConn.connect((err) => {
-      if (err) throw err;
-      console.log("Connected to MySQL Server");
-    });
-  },
 
-  getDB: function() {
-    return _db;
-  }
-};
+module.exports = dbConn;
