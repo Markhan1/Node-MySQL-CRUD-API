@@ -10,8 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/Markhan1/Node-MySQL-CRUD-API.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "mysql",
+    "api",
+    "restfulapi",
+    "javascript",
+    "es6"
+  ],
+  "author": "Markhan1",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Markhan1/Node-MySQL-CRUD-API/issues"
