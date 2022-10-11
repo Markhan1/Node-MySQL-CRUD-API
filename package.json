@@ -1,0 +1,25 @@
+{
+  "name": "nodemysqlcrudapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Markhan1/Node-MySQL-CRUD-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Markhan1/Node-MySQL-CRUD-API/issues"
+  },
+  "homepage": "https://github.com/Markhan1/Node-MySQL-CRUD-API#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
