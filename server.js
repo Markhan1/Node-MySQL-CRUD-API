@@ -2,6 +2,9 @@ require("dotenv").config({ path: './.env' });
 const express = require("express");
 const bodyParser = require("body-parser");
 
+// Mysql connection
+const dbConn = require('./config/db.config');
+
 // create express app
 const app = express();
 
@@ -22,4 +25,5 @@ app.get('/', (req, res) => {
 // listen for requests
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
+    dbConn.connectToServer();
 });
